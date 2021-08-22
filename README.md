@@ -18,5 +18,5 @@ Patika.dev &amp; Kodluyoruz Yemeksepeti Android developer bootcamp graduation pr
 - RecyclerView
 - Motion Layout
 
-[This](yemeksepeti-graduation-project.herokuapp.com) Rest API is created for this app.
+[This](https://yemeksepeti-graduation-project.herokuapp.com) Rest API is created for this app.
 
