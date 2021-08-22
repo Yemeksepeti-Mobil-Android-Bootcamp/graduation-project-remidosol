@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.splash.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.onBoarding.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.auth.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+            <argument
+                android:name="user"
+                app:argType="com.remidosol.yemeksepeti_graduation_remidosol.data.entity.core.User"
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.auth.register.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment">
+        <argument
+            android:name="user"
+            app:argType="com.remidosol.yemeksepeti_graduation_remidosol.data.entity.core.User"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.home.cart.CartFragment"
+        android:label="cart_fragment"
+        tools:layout="@layout/cart_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.home.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.home.restaurants.RestaurantFragment"
+        android:label="restaurant_fragment"
+        tools:layout="@layout/restaurant_fragment" >
+        <action
+            android:id="@+id/action_restaurantFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+            <argument
+                android:name="restaurant"
+                app:argType="com.remidosol.yemeksepeti_graduation_remidosol.data.entity.core.Restaurant"
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantDetailFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.home.restaurants.restaurantDetail.RestaurantDetailFragment"
+        android:label="restaurant_detail_fragment"
+        tools:layout="@layout/restaurant_detail_fragment">
+        <argument
+            android:name="restaurant"
+            app:argType="com.remidosol.yemeksepeti_graduation_remidosol.data.entity.core.Restaurant"
+            />
+        <action
+            android:id="@+id/action_restaurantDetailFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+            <argument
+                android:name="food"
+                app:argType="com.remidosol.yemeksepeti_graduation_remidosol.data.entity.core.Food"
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.remidosol.yemeksepeti_graduation_remidosol.ui.home.restaurants.restaurantDetail.foodDetail.FoodDetailFragment"
+        android:label="food_detail_fragment"
+        tools:layout="@layout/food_detail_fragment" />
+</navigation>

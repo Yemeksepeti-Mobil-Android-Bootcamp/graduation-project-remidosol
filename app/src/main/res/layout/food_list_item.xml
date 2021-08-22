@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    tools:background="@color/white"
+    android:background="?attr/theme_background"
+    android:gravity="start"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/foodImageView"
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:background="@drawable/image_holder"
+        android:backgroundTint="@drawable/image_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_eye_24"
+        android:contentDescription="@string/food_image" />
+
+    <LinearLayout
+        android:id="@+id/foodInfo"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/foodImageView"
+        app:layout_constraintTop_toTopOf="@+id/foodImageView"
+        app:layout_constraintEnd_toStartOf="@+id/discountRateTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/foodImageView"
+        >
+
+        <TextView
+            android:id="@+id/foodNameTextView"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_medium"
+            tools:text="Farm House"
+            android:textSize="@dimen/_10ssp"
+            />
+
+        <TextView
+            android:id="@+id/foodDescriptionTextView"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textAlignment="center"
+            android:textColor="@color/light"
+            android:fontFamily="@font/poppins_regular"
+            tools:text="In Pizza Mania"
+            android:textSize="@dimen/_8ssp"
+            />
+
+        <TextView
+            android:id="@+id/foodPriceTextView"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_medium"
+            tools:text="$8.50"
+            android:textSize="@dimen/_9ssp"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addToCartButton"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginBottom="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/add_to_cart_button"
+        android:backgroundTint="@drawable/add_to_cart_button"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_10ssp"
+        android:text="@string/add"
+        android:drawableEnd="@drawable/ic_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/foodInfo"
+        app:layout_constraintTop_toTopOf="@+id/foodInfo"
+        tools:text="Add" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

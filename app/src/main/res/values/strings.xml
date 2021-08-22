@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">yemeksepeti_graduation_remidosol</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="be_together_main">Be Together</string>
+    <string name="be_together_sub">Healthy eating means eating a variety of foods that give you the nutrients you need to maintain your health, feel good, and have energy.</string>
+    <string name="tasty_dish_main">Choose A Tasty Dish</string>
+    <string name="tasty_dish_sub">Order anything you want from your Favorite restaurant.</string>
+    <string name="easy_payment_main">Easy Payment</string>
+    <string name="easy_payment_sub">Payment made easy through debit card, credit card &amp; more ways to pay for your food.</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="first_name">Firstname</string>
+    <string name="last_name">Lastname</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="upload_picture">Upload Picture</string>
+    <string name="do_not_you_have">Don’t have an account? <b><font color="@color/primary">Register</font></b></string>
+
+    <string name="home">Home</string>
+    <string name="min">%1$d min</string>
+    <string name="restaurant_logo">Restaurant Logo</string>
+    <string name="rating_icon">Rating Icon</string>
+    <string name="arrival_time">Arrival Time</string>
+
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="my_info">My Info</string>
+    <string name="my_previous_orders">My Previous Orders</string>
+    <string name="my_addresses">My Addresses</string>
+    <string name="about_application">About application</string>
+    <string name="style">Style</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="auth">Authentication</string>
+    <string name="logout">Logout</string>
+
+    <string name="splash_0">Android Developer Bootcamp</string>
+    <string name="splash_1">Made By remidosol</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="food_image">Food Image</string>
+    <string name="add">Add</string>
+    <string name="added">Added</string>
+</resources>

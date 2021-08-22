@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background"
+    tools:background="@color/white"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/app_graph" />
+
+    <np.com.susanthapa.curved_bottom_navigation.CurvedBottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cbn_animDuration="500"
+        app:cbn_bg="?attr/theme_background"
+        app:cbn_fabBg="?attr/theme_background"
+        app:cbn_selectedColor="@color/primary"
+        app:cbn_unSelectedColor="@color/primary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+<!--        <meow.bottomnavigation.MeowBottomNavigation-->
+    <!--        android:id="@+id/bottomNavigation"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:mbn_backgroundBottomColor="#ffffff"-->
+    <!--        app:mbn_circleColor="#ffffff"-->
+    <!--        app:mbn_countBackgroundColor="#ff6f00"-->
+    <!--        app:mbn_countTextColor="#ffffff"-->
+    <!--        app:mbn_countTypeface="fonts/SourceSansPro-Regular.ttf"-->
+    <!--        app:mbn_defaultIconColor="#90a4ae"-->
+    <!--        app:mbn_hasAnimation="true"-->
+    <!--        app:mbn_rippleColor="#2f424242"-->
+    <!--        app:mbn_selectedIconColor="#3c415e"-->
+    <!--        app:mbn_shadowColor="#1f212121"-->
+    <!--        />-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:openDrawer="start">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    android:elevation="0dp"
+                    app:navigationIcon="@drawable/ic_menu_24"
+                    app:titleCentered="true"
+                    app:title="@string/home" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <!-- Screen content -->
+            <!-- Use app:layout_behavior="@string/appbar_scrolling_view_behavior" to fit below top app bar -->
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:clipToPadding="false"
+            app:headerLayout="@layout/nav_header_main"
+            style="@style/Widget.Custom.NavigationView"
+            app:menu="@menu/navigation_drawer"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

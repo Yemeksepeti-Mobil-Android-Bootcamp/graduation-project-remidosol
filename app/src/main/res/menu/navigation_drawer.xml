@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_24"
+            android:title="@string/update_profile" />
+        <item
+            android:id="@+id/nav_addresses"
+            android:icon="@drawable/ic_location_on_24"
+            android:title="@string/my_addresses" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_bookmark_24"
+            android:title="@string/my_previous_orders" />
+<!--        <item-->
+<!--            android:id="@+id/nav_theme"-->
+<!--            android:icon="@drawable/ic_style_24"-->
+<!--            android:title="@string/dark_theme" />-->
+    </group>
+
+
+    <item android:title="@string/style">
+        <menu>
+            <item
+                android:id="@+id/nav_theme"
+                android:icon="@drawable/ic_style_24"
+                app:actionLayout="@layout/switch_theme_action_layout"
+                android:title="@string/dark_theme"
+                />
+        </menu>
+    </item>
+
+
+    <item android:title="@string/auth">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_24"
+                android:title="@string/logout"
+                />
+        </menu>
+    </item>
+</menu>

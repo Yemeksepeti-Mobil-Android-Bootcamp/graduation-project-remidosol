@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white"
+    android:background="?attr/theme_background"
+    tools:context=".ui.onBoarding.fragments.TastyDishFragment">
+
+    <ImageView
+        android:id="@+id/tastyDishImageView"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_300sdp"
+        app:srcCompat="@drawable/ic_tasty_dish"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tastyDishTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Choose A Tasty Dish"
+        android:text="@string/tasty_dish_main"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_20ssp"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tastyDishImageView"
+        />
+
+    <TextView
+        android:id="@+id/tastyDishSubTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tasty_dish_sub"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"
+        android:textAlignment="center"
+        android:textColor="@color/light"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tastyDishTextView"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
